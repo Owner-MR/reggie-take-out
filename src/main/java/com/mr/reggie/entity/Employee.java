@@ -18,7 +18,11 @@ public class Employee implements Serializable {
 
     private String username;
 
+<<<<<<< HEAD
     private String name; //管理员
+=======
+    private String name;
+>>>>>>> 3a7b85ab07acfb1fbe749b0c4fd94dcb68150d6a
 
     private String password;
 
@@ -40,4 +44,8 @@ public class Employee implements Serializable {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updateUser;
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3a7b85ab07acfb1fbe749b0c4fd94dcb68150d6a

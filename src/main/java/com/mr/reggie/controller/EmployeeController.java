@@ -1,5 +1,6 @@
 package com.mr.reggie.controller;
 
+<<<<<<< HEAD
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.mr.reggie.common.R;
 import com.mr.reggie.entity.Employee;
@@ -16,12 +17,21 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
+=======
+import com.mr.reggie.service.EmployeeService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+>>>>>>> 3a7b85ab07acfb1fbe749b0c4fd94dcb68150d6a
 @Slf4j
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
+<<<<<<< HEAD
 
     @PostMapping("/login")
     private R<Employee> login(HttpServletRequest request, @RequestBody Employee employee){
@@ -49,3 +59,6 @@ public class EmployeeController {
         return R.success(emp);
     }
 }
+=======
+}
+>>>>>>> 3a7b85ab07acfb1fbe749b0c4fd94dcb68150d6a
