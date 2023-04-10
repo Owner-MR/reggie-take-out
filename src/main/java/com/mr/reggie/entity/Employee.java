@@ -18,11 +18,7 @@ public class Employee implements Serializable {
 
     private String username;
 
-<<<<<<< HEAD
     private String name; //管理员
-=======
-    private String name;
->>>>>>> 3a7b85ab07acfb1fbe749b0c4fd94dcb68150d6a
 
     private String password;
 
@@ -34,8 +30,10 @@ public class Employee implements Serializable {
 
     private Integer status;
 
+    @TableField(fill = FieldFill.INSERT) //插入时更新字段
     private LocalDateTime createTime;
 
+    @TableField(fill = FieldFill.INSERT_UPDATE) //插入和更新时更新字段
     private LocalDateTime updateTime;
 
     @TableField(fill = FieldFill.INSERT)
@@ -44,8 +42,4 @@ public class Employee implements Serializable {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updateUser;
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3a7b85ab07acfb1fbe749b0c4fd94dcb68150d6a
