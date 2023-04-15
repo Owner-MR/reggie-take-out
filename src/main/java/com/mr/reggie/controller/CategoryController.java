@@ -38,9 +38,10 @@ public class CategoryController {
         return R.success(pageInfo);
     }
     @DeleteMapping
-    public R<String> delete(Long ids){
-        log.info("删除分类id：{}", ids);
-        categoryService.removeById(ids);
+    public R<String> delete(Long id){
+        log.info("删除分类id：{}", id);
+       // categoryService.removeById(id);
+        categoryService.remove(id);
         return R.success("分类信息删除成功");
     }
 

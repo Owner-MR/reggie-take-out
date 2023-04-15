@@ -18,13 +18,21 @@ public class GlobalExeptionHandler {
      * 异常处理方法
      * @return
      */
-    @ExceptionHandler (SQLIntegrityConstraintViolationException.class) //捕获该异常
+    @ExceptionHandler ({SQLIntegrityConstraintViolationException.class}) //捕获该异常
     public R<String> exceptionHandler(SQLIntegrityConstraintViolationException ex){
         log.error(ex.getMessage());
         if (ex.getMessage().contains("Duplicate entry")){
             String msg = ex.getMessage().split(" ")[2];
             return R.error(msg + "已存在");
         }
+
         return R.error("未知错误");
+    }
+    @ExceptionHandler ({CustomExeption.class}) //捕获该异常
+    public R<String> exceptionHandler(CustomExeption customExeption){
+        log.error(customExeption.getMessage());
+
+
+        return R.error(customExeption.getMessage());
     }
 }
