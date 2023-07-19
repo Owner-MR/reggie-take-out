@@ -1,2 +1,2 @@
-# reggie-take-out
-瑞吉外卖
+# take-out APP
+外卖送餐平台
